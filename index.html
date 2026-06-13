@@ -4,160 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alok Dev Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
-  <style>
-    :root {
-        --bg: #0a192f;
-        --text: #ccd6f6;
-        --accent: #64ffda;
-        --secondary: #8892b0;
-    }
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-base: #060d1a;
+            --bg-card: rgba(10, 25, 47, 0.7);
+            --heading-primary: #ffffff;
+            --text-main: #b4c6ef;
+            --accent-neon: #64ffda;
+            --accent-muted: #8892b0;
+        }
 
-    body {
-        background-image: url("images3.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-color: var(--bg); 
-        color: var(--text);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-    .card {
-        background: rgba(0, 0, 0, 0.7); 
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-left: 5px solid var(--accent);
-        padding: 30px;
-        border-radius: 15px;
-        max-width: 700px;
-        width: 100%;
-        margin: 20px 0;
-    }
-    section {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 20px;
-        box-sizing: border-box;
-    }
-    .profile-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 4px solid var(--accent);
-        object-fit: cover;
-        margin-bottom: 20px;
-        transition: transform 0.3s;
-    }
-    .profile-img:hover {
-        transform: scale(1.1) rotate(0deg);
-    }
-    h1 { font-size: 3rem; color: var(--accent); margin: 10px 0; text-align: center; }
-    .tag { color: var(--accent); font-family: monospace; }
-    .achievement-list { list-style: none; padding: 0; }
-    .achievement-list li::before { content: "▹ "; color: var(--accent); }
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(10, 25, 47, 0.9);
-        padding: 15px;
-        text-align: center;
-        z-index: 1000;
-    }
-    nav a {
-        color: var(--accent);
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-    }
-.dev-banner {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(10, 25, 47, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--accent);
-    color: var(--text);
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-size: 14px;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(100, 255, 218, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0); }
-}
-</style>
+        body {
+            background-image: url("images3.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-color: var(--bg-base); 
+            color: var(--text-main);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: var(--bg-card); 
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(100, 255, 218, 0.15);
+            border-left: 4px solid var(--accent-neon);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 750px;
+            width: 100%;
+            margin: 25px 0;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px 60px 20px;
+            box-sizing: border-box;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-neon);
+            object-fit: cover;
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.4);
+        }
+        h1 { 
+            font-size: 3.2rem; 
+            color: var(--heading-primary); 
+            margin: 10px 0; 
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--heading-primary);
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--heading-primary);
+            margin-top: 30px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+        }
+
+        .intro-container { 
+            color: var(--text-main); 
+            text-align: center;
+            max-width: 680px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .intro-container p {
+            margin-bottom: 20px;
+        }
+
+        .tag-highlight {
+            color: var(--accent-neon);
+            font-family: monospace;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .custom-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 15px 0;
+        }
+
+        .custom-list li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .custom-list strong {
+            color: var(--heading-primary);
+        }
+
+        .custom-list li::before { 
+            content: "▹ "; 
+            color: var(--accent-neon); 
+            font-weight: bold;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(6, 13, 26, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 0.9rem;
+            font-family: monospace;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-neon);
+        }
+
+        .dev-banner {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0a192f;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            color: var(--text-main);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-family: monospace;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            background-color: var(--accent-neon);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(100, 255, 218, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0); }
+        }
+    </style>
 </head>
 <body>
+
     <nav>
-        <a href="#home">👨‍💻</a>
-        <a href="#home">Home</a>
-        <a href="#about">Bio</a>
-        <a href="#achievements">Success</a>
-        <a href="#aim">Future</a>
-        <a href="#contacts">Contact</a>
+        <a href="#home">// home</a>
+        <a href="#about">// bio</a>
+        <a href="#aim">// goal</a>
+        <a href="#contacts">// contact</a>
     </nav>
+
     <section id="home">
-        <img src="profimage.jpeg" alt="Owner" class="profile-img" data-aos="zoom-in">
-        <h1 data-aos="fade-up">(o|o) </h1>
-        <h1 data-aos="fade-up">Hello, I'm ALOK YADAV </h1>
-        <p class="tag" data-aos="fade-up" data-aos-delay="200">here i showcase my work</p>
-    </section>
-    <section id="about">
-        <div class="card" data-aos="fade-right">
-            <h2><span class="tag">01.</span> 🧾Biography</h2>
-            <li>Hi!</li>
-            <li>Guys i am Alok Yadav. currently i am doing B.Tech in Computer Science Engineering(2025-29)</li>
-            <li>my work and birth place is lucknow</li>
-            <li>🔃</li>
-        </div>
-    </section>
-    <section id="achievements">
-        <div class="card" data-aos="fade-left">
-            <h2><span class="tag">02.</span> 🏆Achievements</h2>
-            <ul class="achievement-list">
-                <li>Winner of National Hackathon 202🔃</li>
-                <li></li>
-                <li></li>
+        <img src="profimage.jpeg" alt="Alok Yadav" class="profile-img" data-aos="zoom-in">
+        <h1 data-aos="fade-up">ALOK YADAV</h1>
+        
+        <div class="intro-container" data-aos="fade-up" data-aos-delay="200">
+            <span class="tag-highlight">STUDENT & RESEARCHER</span>
+            
+            <p style="margin-top: 15px;">I am a Computer Science & Engineering student passionate about software engineering, secure systems, and core technical research. My toolkit is built around Python and C, combined with web technologies like HTML and JavaScript.</p>
+            
+            <p>I am deeply fascinated by steganography and data security—specifically the logic behind covert communication. Whether it involves low-level optimization, designing algorithms, or building automation scripts, I thrive on precise, analytical problem-solving. My long-term professional ambition is to serve as an R&D research scientist, contributing to innovation within national defense.</p>
+            
+            <h3>🛠️ Core Stack & Focus Areas</h3>
+            <ul class="custom-list" style="display: inline-block; text-align: left;">
+                <li><strong>Languages:</strong> Python, C</li>
+                <li><strong>Web Architecture:</strong> HTML5, CSS3, JavaScript</li>
+                <li><strong>Core Domains:</strong> Cryptography, Steganography, Low-level Systems Logic</li>
             </ul>
         </div>
     </section>
+
+    <section id="about">
+        <div class="card" data-aos="fade-right">
+            <h2><span class="tag-highlight">01.</span> Biography</h2>
+            <ul class="custom-list">
+                <li><strong>Academic Profile:</strong> Currently pursuing a Bachelor of Technology (B.Tech) in Computer Science Engineering.</li>
+                <li><strong>Timeline:</strong> Class of 2025 — 2029.</li>
+                <li><strong>Base Location:</strong> Born and currently working out of Lucknow, India.</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="aim">
         <div class="card" data-aos="flip-up">
-            <h2><span class="tag">03.</span>🎯The Aim</h2>
-            <p>To leverage AI and decentralized technologies to build tools that make information more accessible and secure for everyone globally.</p>
+            <h2><span class="tag-highlight">02.</span> The Aim</h2>
+            <p>To engineer next-generation software tools by leveraging AI architectures and decentralized framework protocols. Focused entirely on developing global solutions that make structural digital information highly reliable, fast, and cryptographically secure.</p>
         </div>
     </section>
+
     <section id="contacts">
         <div class="card" data-aos="flip-up">
-            <h2><span class="tag">04.</span>📞Contacts</h2>
-            <li>for suggestions or any query you can contact me</li>
-            <li>yadavalok7114@gmail.com</li>
-            <li>phone no. 6392489913</li>
+            <h2><span class="tag-highlight">03.</span> Communication Channel</h2>
+            <p>For open-source research peer collaborations, technology briefs, or algorithmic system consultation:</p>
+            <ul class="custom-list">
+                <li><strong>Secure Email Path:</strong> dev.alokyadav25@gmail.com</li>
+            </ul>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
+
+    <script src="https://cloudflare.com"></script>
     <script>
         AOS.init({
             duration: 1000,
@@ -165,9 +261,10 @@
             mirror: true
         });
     </script>
+
     <div class="dev-banner">
         <span class="pulse-dot"></span>
-        Project in Progress: Some features may be experimental.
+        some features are experimental and may have issues
     </div>
 </body>
 </html>
